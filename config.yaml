@@ -1,0 +1,11 @@
+# File path of the .onnx model
+model_path: _model/model.onnx
+
+# File path of the .onnx.json config
+config_path: _model/model.onnx.json
+
+# Path to the root folder with sessions, monitored recursively
+monitored_path: _sessions
+
+# Internal speaker id for models with multiple voices
+speaker_id: 1
