@@ -39,7 +39,7 @@ impl Voice {
             .filter_map(|e| e.ok())
         {
             let f_path = file.path().to_str().unwrap();
-            if f_path.ends_with(".json") {
+            if f_path.ends_with(".jsonl") {
                 dbg!(f_path);
                 let last_ix = fs::read_to_string(f_path)
                     .unwrap()
@@ -81,7 +81,7 @@ impl Voice {
     pub fn append_from_event(&mut self, event: DebouncedEvent) {
         let path = event.path.to_str().unwrap();
 
-        if !path.ends_with(".json") {
+        if !path.ends_with(".jsonl") {
             return;
         }
 
